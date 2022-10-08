@@ -23,12 +23,13 @@ const Home = () => {
               </Link>
             </div>
           </div>
-
+         
           <div className="home-image-container">
             <MainImage />
+ </div>
           </div>
         </div>
-      </div>
+      
     </>
   );
 };

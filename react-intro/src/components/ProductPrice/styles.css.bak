@@ -8,7 +8,7 @@
    margin-top: 3px;
    
 }
-.product-price-container h3 {
+.produtct-price-container h3 {
     font-size: 32px;
     color: #407BFF;
     margin-left: 5px;

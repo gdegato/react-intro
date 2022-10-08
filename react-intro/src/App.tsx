@@ -1,14 +1,12 @@
-import Navbar from './components/Navbar';
 import './assets/styles/custom.scss';
 import './App.css';
+import Routes from 'Routes';
 
-import Home from './pages/Home';
-
-const App = () => {
+function App() {
   return (
-    <>
-      <Home />
-    </>
+  <Routes />
   );
-};
+}
+  
+
 export default App;

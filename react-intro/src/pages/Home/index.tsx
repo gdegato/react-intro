@@ -17,13 +17,9 @@ const Home = () => {
                 mercado.
               </p>
             </div>
-            <div>
-              <Link to="/products">
-                <ButtonIcon />
-              </Link>
-            </div>
+            <Link to="/products"></Link>
+            <ButtonIcon />
           </div>
-
           <div className="home-image-container">
             <MainImage />
           </div>

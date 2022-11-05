@@ -6,9 +6,9 @@ type Props = {
 
 const ProductPrice = ({ price }: Props) => {
   return (
-    <div className="produtct-price-container">
-      <span>R$</span>
-      <h3>{formatPrice(price)}</h3>
+    <div className="product-price-container">
+      <span className="cifrao">R$</span>
+      <h3 className="price-color">{formatPrice(price)}</h3>
     </div>
   );
 };

@@ -22,9 +22,9 @@ const Home = () => {
           </div>
           <div className="home-image-container">
             <MainImage />
-          </div>
+           </div>
         </div>
-      </div>
+       </div>
     </>
   );
 };

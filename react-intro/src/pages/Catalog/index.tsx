@@ -7,11 +7,15 @@ import { Product } from 'types/product';
 import { AxiosParams } from 'types/vendors/axios';
 import { SpringPage } from 'types/vendors/spring';
 import { BASE_URL } from 'util/requests';
+import CardLoader from './CardLoader';
 
 import './styles.css';
 
 const Catalog = () => {
   const [page, setPage] = useState<SpringPage<Product>>();
+  // 1. isLoading começa com false
+
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const params: AxiosParams = {
@@ -22,9 +26,17 @@ const Catalog = () => {
         size: 12,
       },
     };
-    axios(params).then((response) => {
-      setPage(response.data);
-    });
+    // 2. ao fazer a requisição, passa isLoading para true para indicar ao componente que está carregando
+    // 3. chama a requisição
+    setIsLoading(true);
+    axios(params)
+      .then((response) => {
+        setPage(response.data);
+        // 4. depois que resolver a requisição, chama o setIsLoading para false, indicando que não está mais carregando
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -35,13 +47,17 @@ const Catalog = () => {
         </div>
 
         <div className="row">
-          {page?.content.map((product) => (
-            <div className="col-sm-6 col-lg-4 col-xl-3" key={product.id}>
-              <Link to="/products/1">
-                <ProductCard product={product} />
-              </Link>
-            </div>
-          ))}
+          {isLoading ? (
+            <CardLoader />
+          ) : (
+            page?.content.map((product) => (
+              <div className="col-sm-6 col-lg-4 col-xl-3" key={product.id}>
+                <Link to="/products/1">
+                  <ProductCard product={product} />
+                </Link>
+              </div>
+            ))
+          )}
         </div>
 
         <div className="row">

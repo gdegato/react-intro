@@ -1,4 +1,5 @@
 import { formatPrice } from 'util/formatters';
+
 import './styles.css';
 type Props = {
   price: number;

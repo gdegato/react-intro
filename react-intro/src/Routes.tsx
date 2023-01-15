@@ -2,10 +2,10 @@ import Navbar from 'components/Navbar';
 import Catalog from 'pages/Catalog';
 import Home from 'pages/Home';
 import Admin from 'pages/Admin';
-import {Redirect, Route, Router, Switch } from 'react-router-dom';
+import { Redirect, Route, Router, Switch } from 'react-router-dom';
 import ProductDetails from 'pages/ProductDetails';
 import Auth from 'pages/Admin/Auth';
-import history from 'util/history'; 
+import history from 'util/history';
 
 const Routes = () => (
   <Router history={history}>

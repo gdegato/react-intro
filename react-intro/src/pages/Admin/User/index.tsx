@@ -1,7 +1,7 @@
 import { AxiosRequestConfig } from 'axios';
 import { useEffect, useState } from 'react';
 import { User } from 'types/user';
-import { SpringPage } from 'types/vendors/spring';
+import { SpringPage } from 'types/vendor/spring';
 import { requestBackend } from 'util/requests';
 
 const Users = () => {

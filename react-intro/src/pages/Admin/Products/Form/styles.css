@@ -53,6 +53,10 @@
     height: 50px;
 }
 
+.form-control {
+    background-color: none;
+}
+
 .product-crud-select__placeholder {
     color: #9E9E9E !important;
 }

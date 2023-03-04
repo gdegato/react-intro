@@ -23,7 +23,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
   >();
 
   const onSubmit = (formData: ProductFilterData) => {
-    console.log('enviou', formData);
+    onSubmitFilter(formData);
   };
 
   const handleFormClear = () => {
@@ -85,7 +85,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
             onClick={handleFormClear}
             className="btn btn-outline-secondary btn-product-filter-clear"
           >
-            LIMPAR<span className="btn-product-filter-word"> FILTRO</span>
+           LIMPAR <span className="btn-product-filter-word">  FILTRO</span>
           </button>
         </div>
       </form>

@@ -5,13 +5,15 @@ import { ReactComponent as ArrowIcon } from '../../assets/images/arrow.svg';
 type Props = {
   pageCount: number;
   range: number;
+  forcePage?: number
   onChange?: (pageNumber: number) => void;
 };
 
-const Pagination = ({ pageCount, range, onChange }: Props) => {
+const Pagination = ({ forcePage, pageCount, range, onChange }: Props) => {
   return (
     <>
       <ReactPaginate
+        forcePage={forcePage}
         pageCount={pageCount}
         pageRangeDisplayed={range}
         marginPagesDisplayed={1}

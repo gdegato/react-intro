@@ -16,8 +16,9 @@ const Home = () => {
                 mercado.
               </p>
             </div>
-            <Link to="/products"></Link>
-            <ButtonIcon text="Inicie agora a sua busca" />
+            <Link to="/products">
+              <ButtonIcon text="Inicie agora a sua busca" />
+            </Link>
           </div>
           <div className="home-image-container">
             <MainImage />
